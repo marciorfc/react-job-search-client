@@ -28,13 +28,32 @@
   color: #61dafb;
 }
 
+body {
+  margin: 20px 40px;
+}
+
 .job {
   width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  margin: 10px 0;
-  padding: 10px 0;
+  margin: 20px 0;
+  padding: 20px 10px;
+  align-items: center;
+}
+
+.job:hover {
+  cursor: pointer;
+  color: #666666;
+
+}
+
+.job-company {
+  padding: 0 30px;
+}
+
+.job-dialog {
+  padding: 30px 50px;
 }
 
 @keyframes App-logo-spin {
