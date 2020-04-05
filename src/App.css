@@ -52,6 +52,11 @@ body {
   padding: 0 30px;
 }
 
+.detail-logo {
+  height: 30px;
+  float: right;
+}
+
 .job-dialog {
   padding: 30px 50px;
 }

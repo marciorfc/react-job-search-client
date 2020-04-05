@@ -31,20 +31,25 @@ export default function JobModal({job, open, handleClose}) {
             aria-labelledby="alert-dialog-slide-title"
             aria-describedby="alert-dialog-slide-description"
           >
-            <DialogTitle id="alert-dialog-slide-title">{"Use Google's location service?"}</DialogTitle>
+            <DialogTitle id="alert-dialog-slide-title">
+            {job.title} - {job.company}
+            <img className={'detail-logo'} src={job.company_logo} />
+            </DialogTitle>
             <DialogContent>
-              <DialogContentText id="alert-dialog-slide-description">
-                Let Google help apps determine location. This means sending anonymous location data to
-                Google, even when no apps are running.
-              </DialogContentText>
+              <DialogContentText id="alert-dialog-slide-description"
+                dangerouslySetInnerHTML={{__html: job.description}} /> 
+                
+              
             </DialogContent>
             <DialogActions>
               <Button onClick={handleClose} color="primary">
                 Disagree
               </Button>
-              <Button onClick={handleClose} color="primary">
-                Agree
-              </Button>
+              <a href={job.url} target="_blank">
+                <Button  color="primary">
+                  Apply
+                </Button>
+              </a>
             </DialogActions>
           </Dialog>
         </div>
